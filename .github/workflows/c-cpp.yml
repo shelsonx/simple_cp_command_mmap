@@ -10,9 +10,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - name: Run
-      run: make run
     - name: Build
       run: make mycp
     - name: Compile Project
@@ -20,3 +17,11 @@ jobs:
       with:
         name: compiled_project
         path: mycp
+  execute:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Run
+      run: make run
+  
+  
