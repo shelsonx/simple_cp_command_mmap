@@ -11,10 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: make run
+    - name: Run
       run: make run
-    - name: build
-      run: make 
+    - name: Build
+      run: make mycp
     - name: Compile Project
       uses: actions/upload-artifact@v4
       with:
