@@ -8,10 +8,15 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v4
-    - name: make
-      run: make
+    - name: make run
+      run: make run
+    - name: build
+      run: make 
+    - name: Compile Project
+      uses: actions/upload-artifact@v4
+      with:
+        name: compiled_project
+        path: mycp
